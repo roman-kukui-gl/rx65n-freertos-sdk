@@ -182,7 +182,8 @@ void vApplicationDaemonTaskStartupHook( void )
         vDevModeKeyProvisioning();
 
         /* Run all demos. */
-        DEMO_RUNNER_RunDemos();
+        /// \todo
+        // DEMO_RUNNER_RunDemos();
 #if(0)
         /* Create the task to run tests. */
         xTaskCreate( TEST_RUNNER_RunTests_task,

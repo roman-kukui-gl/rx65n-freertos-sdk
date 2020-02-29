@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/app/frtos_skeleton",
+                "${workspaceFolder}/aws_cc/cfg",
+                "${workspaceFolder}/aws_cc_port/freertos",
+                "${workspaceFolder}/aws_cc_port/freertos/compiler_support/gnuc",
+                "${workspaceFolder}/aws_cc_port/freertos/network_support/uart_sx_ulpgn",
+                "${workspaceFolder}/aws_cc_port/freertos/ota_support",
+                "${workspaceFolder}/board/general",
+                "${workspaceFolder}/board/r_config",
+                "${workspaceFolder}/board/r_pincfg",
+                "${workspaceFolder}/drv/r_bsp",
+                "${workspaceFolder}/drv/r_bsp/board/generic_rx65n",
+                "${workspaceFolder}/drv/r_bsp/mcu/rx65n",
+                "${workspaceFolder}/drv/r_bsp/mcu/rx65n/register_access/gnuc",
+                "${workspaceFolder}/drv/r_byteq",
+                "${workspaceFolder}/drv/r_byteq/ref",
+                "${workspaceFolder}/drv/r_byteq/src",
+                "${workspaceFolder}/drv/r_flash_rx",
+                "${workspaceFolder}/drv/r_flash_rx/ref",
+                "${workspaceFolder}/drv/r_flash_rx/src",
+                "${workspaceFolder}/drv/r_flash_rx/src/flash_type_1",
+                "${workspaceFolder}/drv/r_flash_rx/src/flash_type_3",
+                "${workspaceFolder}/drv/r_flash_rx/src/flash_type_4",
+                "${workspaceFolder}/drv/r_flash_rx/src/targets/rx65n",
+                "${workspaceFolder}/drv/r_s12ad_rx",
+                "${workspaceFolder}/drv/r_s12ad_rx/ref",
+                "${workspaceFolder}/drv/r_s12ad_rx/src",
+                "${workspaceFolder}/drv/r_s12ad_rx/src/targets/rx65n",
+                "${workspaceFolder}/drv/r_sci_rx",
+                "${workspaceFolder}/drv/r_sci_rx/ref",
+                "${workspaceFolder}/drv/r_sci_rx/src",
+                "${workspaceFolder}/drv/r_sci_rx/src/targets/rx65n",
+                "${workspaceFolder}/FreeRTOS/cfg",
+                "${workspaceFolder}/FreeRTOS/inc",
+                "${workspaceFolder}/FreeRTOS/portable/GCC/RX600v2",
+                "${workspaceFolder}/lib/third_party/jsmn",
+                "${workspaceFolder}/lib/third_party/mbedtls/include/mbedtls"
+            ],
+            "defines": [],
+            "compilerPath": "${env.HOME}/toolchains/gcc_8.3.0.201904_gnurx-elf/bin/rx-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x86",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
