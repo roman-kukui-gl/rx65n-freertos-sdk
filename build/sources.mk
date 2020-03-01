@@ -1,0 +1,129 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+ASM_UPPER_SRCS := 
+O_SRCS := 
+LINKER_SCRIPT := 
+SX_SRCS := 
+JMP_UPPER_SRCS := 
+P_UPPER_SRCS := 
+X_SRCS := 
+SRC_SRCS := 
+X_UPPER_SRCS := 
+JMP_SRCS := 
+FSY_UPPER_SRCS := 
+PP_UPPER_SRCS := 
+OBJ_UPPER_SRCS := 
+ASM_SRCS := 
+SX_UPPER_SRCS := 
+O_UPPER_SRCS := 
+S_UPPER_SRCS := 
+C_UPPER_SRCS := 
+OBJ_SRCS := 
+S_SRCS := 
+PP_SRCS := 
+SRC_UPPER_SRCS := 
+FSY_SRCS := 
+P_SRCS := 
+C_SRCS := 
+JMP_DEPS := 
+FSY_DEPS := 
+C_UPPER_DEPS := 
+SRC_UPPER_DEPS := 
+P_UPPER_DEPS := 
+S_DEPS := 
+PP_UPPER_DEPS := 
+P_DEPS := 
+FSY_UPPER_DEPS := 
+C_DEPS := 
+SRC_DEPS := 
+OBJCOPY := 
+JMP_UPPER_DEPS := 
+PP_DEPS := 
+ASM_UPPER_DEPS := 
+SX_DEPS := 
+OBJS := 
+SX_UPPER_DEPS := 
+ASM_DEPS := 
+LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS := 
+S_UPPER_DEPS := 
+
+# Project includes
+INCS = \
+-I"../FreeRTOS/cfg" \
+-I"../FreeRTOS/inc" \
+-I"../FreeRTOS/portable/GCC/RX600v2" \
+-I"../app/frtos_skeleton" \
+-I"../aws_cc/cfg" \
+-I"../aws_cc/inc" \
+-I"../aws_cc_port/freertos" \
+-I"../aws_cc_port/freertos/compiler_support/gnuc" \
+-I"../aws_cc_port/freertos/network_support/uart_sx_ulpgn" \
+-I"../aws_cc_port/freertos/ota_support" \
+-I"../board/general" \
+-I"../board/r_config" \
+-I"../board/r_pincfg" \
+-I"../drv/r_bsp" \
+-I"../drv/r_bsp/board/generic_rx65n" \
+-I"../drv/r_bsp/mcu/rx65n" \
+-I"../drv/r_bsp/mcu/rx65n/register_access/gnuc" \
+-I"../drv/r_byteq" \
+-I"../drv/r_byteq/ref" \
+-I"../drv/r_byteq/src" \
+-I"../drv/r_flash_rx" \
+-I"../drv/r_flash_rx/ref" \
+-I"../drv/r_flash_rx/src" \
+-I"../drv/r_flash_rx/src/flash_type_1" \
+-I"../drv/r_flash_rx/src/flash_type_3" \
+-I"../drv/r_flash_rx/src/flash_type_4" \
+-I"../drv/r_flash_rx/src/targets/rx65n" \
+-I"../drv/r_s12ad_rx" \
+-I"../drv/r_s12ad_rx/ref" \
+-I"../drv/r_s12ad_rx/src" \
+-I"../drv/r_s12ad_rx/src/targets/rx65n" \
+-I"../drv/r_sci_rx" \
+-I"../drv/r_sci_rx/ref" \
+-I"../drv/r_sci_rx/src" \
+-I"../drv/r_sci_rx/src/targets/rx65n" \
+-I"../lib/pkcs11" \
+-I"../lib/third_party/jsmn" \
+-I"../lib/third_party/mbedtls/include"
+
+# Every subdirectory with source files must be described here
+SUBDIRS := \
+FreeRTOS/portable/GCC/RX600v2 \
+FreeRTOS/portable/MemMang \
+FreeRTOS \
+app/frtos_startup \
+app \
+aws_cc_port/freertos/compiler_support/gnuc \
+aws_cc_port/freertos/network_support/uart_sx_ulpgn \
+aws_cc_port/freertos \
+board/general \
+board/r_pincfg \
+drv/r_bsp/board/generic_rx65n \
+drv/r_bsp/mcu/all \
+drv/r_bsp/mcu/rx65n \
+drv/r_byteq/src \
+drv/r_flash_rx/src/flash_type_1 \
+drv/r_flash_rx/src/flash_type_3 \
+drv/r_flash_rx/src/flash_type_4 \
+drv/r_flash_rx/src \
+drv/r_s12ad_rx/src/targets/rx65n \
+drv/r_s12ad_rx/src \
+drv/r_sci_rx/src/targets/rx65n \
+drv/r_sci_rx/src \
+lib/bufferpool \
+lib/crypto \
+lib/mqtt \
+lib/pkcs11 \
+lib/secure_sockets \
+lib/shadow \
+lib/third_party/jsmn \
+lib/third_party/mbedtls/source \
+lib/tls \
+lib/utils \
+aws_cc/logging \
+aws_cc/devmode_key_provisioning \
+lib/wifi

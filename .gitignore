@@ -1,2 +1,8 @@
-# build dir
-build/
+# build tmps
+*.o
+*.d
+*.o.in
+*.lst
+*.elf
+*.map
+*.mot
