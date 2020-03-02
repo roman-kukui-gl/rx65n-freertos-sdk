@@ -6,3 +6,6 @@
 *.elf
 *.map
 *.mot
+
+# skip VSCode settings
+.vscode/settings.json
