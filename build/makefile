@@ -119,6 +119,13 @@ aws_demos.mot \
 # All Target
 all: aws_demos.elf secondary-outputs
 
+# target for mbed library
+lib: libboard.a
+
+libboard.a: $(OBJS)
+	$(info Finished building: libboard.a)
+	$(shell ar rcs libboard.a $(OBJS))
+
 # Tool invocations
 aws_demos.elf: $(OBJS) $(USER_OBJS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS) $(LINKER_SCRIPT)
 	$(info 'Building target: $@')
