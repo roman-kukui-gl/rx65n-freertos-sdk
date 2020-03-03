@@ -34,7 +34,8 @@ extern "C" {
 #endif
 
 /* Hardware specifics. */
-#include "machine.h"
+/// \todo Commented.
+// #include "machine.h"
 
 /*-----------------------------------------------------------
  * Port specific definitions.
