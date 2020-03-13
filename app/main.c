@@ -142,11 +142,18 @@ void main( void )
         // call mbed cc entrypoint
         mbed_cloud_application_entrypoint();
 
-                // configPRINT_STRING("...");
-        configPRINTF(("counter: %d\n\r", i));
-        i++;
+        // configPRINT_STRING("...");
+        // configPRINTF(("counter: %d\n\r", i));
+        // i++;
 
-    	vTaskDelay(30000);
+        // entrypoint exit trap
+        // configPRINTF(("The END of the END :((\n"));
+        configPRINTF(("entrypoint exit trap\n"));
+        while(1) {
+            vTaskDelay(1000);
+            i++;
+            configPRINTF(("\tuptime,s: %u\r", i));
+        }
     }
 }
 /*-----------------------------------------------------------*/
