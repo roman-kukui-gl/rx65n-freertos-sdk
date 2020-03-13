@@ -287,7 +287,7 @@ unsigned short uart_string_scanf(char *pString, unsigned short str_length) {
 * Arguments    : sent character
 * Return Value : none
 ***********************************************************************************************************************/
-void uart_charput(uint32_t output_int)
+void uart_charput(unsigned char output_int)
 {
     uint8_t output_char = (uint8_t)output_int;
     volatile uint32_t output_length = 0;
@@ -311,7 +311,7 @@ void uart_charput(uint32_t output_int)
 * Arguments    : none
 * Return Value : received character
 ***********************************************************************************************************************/
-uint32_t uart_charget (void)
+unsigned char uart_charget (void)
 {
     uint8_t input_char;
     volatile uint32_t input_length=0;

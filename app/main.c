@@ -23,6 +23,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  http://www.FreeRTOS.org
 */
 
+#define BUILD_DATE      __DATE__
+#define BUILD_TIME      __TIME__
+
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -125,36 +128,44 @@ static void prvWifiConnect( void );
 static void prvMiscInitialization( void );
 /*-----------------------------------------------------------*/
 
+extern int mbed_cloud_application_entrypoint(void);
+
 /**
  * @brief Application runtime entry point.
  */
 void main( void )
 {
-    /* Perform any hardware initialization that does not require the RTOS to be
-     * running.  */
-
-    /* Start the scheduler.  Initialization that requires the OS to be running,
-     * including the WiFi initialization, is performed in the RTOS daemon task
-     * startup hook. */
-    // vTaskStartScheduler();
-
+    uint8_t i = 0;
 
     while(1)
     {
-    	vTaskDelay(10000);
+        // call mbed cc entrypoint
+        mbed_cloud_application_entrypoint();
+
+                // configPRINT_STRING("...");
+        configPRINTF(("counter: %d\n\r", i));
+        i++;
+
+    	vTaskDelay(30000);
     }
 }
 /*-----------------------------------------------------------*/
 
 static void prvMiscInitialization( void )
 {
-    /* FIX ME. */
-	uart_config();
-	configPRINT_STRING(("Hello World.\r\n"));
-    /* Start logging task. */
+    // Initialize UART for debug prints
+    uart_config();
+
+	configPRINT_STRING(("\nHello from Linux.\r\n"));
+
+    /// \todo   !!! Decreas log priority after debugging to tskIDLE_PRIORITY
+
+    /* Start logging task.*/
     xLoggingTaskInitialize( mainLOGGING_TASK_STACK_SIZE,
-                            tskIDLE_PRIORITY,
+                            configMAX_PRIORITIES-1,
                             mainLOGGING_MESSAGE_QUEUE_LENGTH );
+
+    /** \warning Do not use configPRINTF before Logging task initialisation.*/
 }
 /*-----------------------------------------------------------*/
 
@@ -162,7 +173,10 @@ void vApplicationDaemonTaskStartupHook( void )
 {
     prvMiscInitialization();
 
-    if( SYSTEM_Init() == pdPASS )
+    configPRINTF(("\tBuild: %s %s\n\r", BUILD_DATE, BUILD_TIME));
+
+    // if( SYSTEM_Init() == pdPASS )
+    if(0)      /// \todo Uncomment it, if network connection needed.
     {
 #if(0)
         /* Initialise the RTOS's TCP/IP stack.  The tasks that use the network
@@ -176,10 +190,10 @@ void vApplicationDaemonTaskStartupHook( void )
 #endif
 
     	/* Connect to the wifi before running the demos */
-        prvWifiConnect();
+        // prvWifiConnect();
 
         /* Provision the device with AWS certificate and private key. */
-        vDevModeKeyProvisioning();
+        // vDevModeKeyProvisioning();
 
         /* Run all demos. */
         /// \todo
