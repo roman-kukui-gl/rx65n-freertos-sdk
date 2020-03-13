@@ -50,7 +50,7 @@
 #define configENABLE_BACKWARD_COMPATIBILITY        1
 #define configUSE_PREEMPTION                       1
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION    0
-#define configMAX_PRIORITIES                       (7)
+#define configMAX_PRIORITIES                       (10)
 #define configTICK_RATE_HZ                         (1000)
 #define configMINIMAL_STACK_SIZE                   (( unsigned short ) 512)
 #define configTOTAL_HEAP_SIZE                      (( size_t ) ( 128U * 1024U ))

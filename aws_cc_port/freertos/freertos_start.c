@@ -437,7 +437,7 @@ void Processing_Before_Start_Kernel(void)
 
     /************** task creation ****************************/
     /* Main task. */
-    ret = xTaskCreate(main, "MAIN_TASK", 512, NULL, 3, NULL);
+    ret = xTaskCreate(main, "MAIN_TASK", 512, NULL, 5, NULL);
     if (pdPASS != ret)
     {
         while(1)
